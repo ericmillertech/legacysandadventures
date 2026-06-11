@@ -95,7 +95,7 @@
       font-family: var(--heading-font); font-weight: 900; font-size: 1.1rem; color: var(--text);
       text-decoration: none;
     }
-    .nav-logo img { height: 44px; }
+    .nav-logo img { height: 48px; }
     .nav-logo .logo-text span { color: var(--sand); }
     .nav-links { display: flex; align-items: center; gap: 28px; }
     .nav-links a { font-size: .88rem; font-weight: 600; color: var(--dim); text-decoration: none; transition: color .2s; }
@@ -192,6 +192,41 @@
     .hero-card-icon { font-size: 2.4rem; flex-shrink: 0; }
     .hero-card h4 { font-family: var(--heading-font); font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 2px; }
     .hero-card p  { font-size: .84rem; color: var(--dim); line-height: 1.5; }
+
+    /* Digging animation */
+    .dig-scene {
+      display: flex; align-items: flex-end; gap: 6px;
+      margin-bottom: 28px; height: 52px;
+    }
+    .dig-shovel {
+      font-size: 1.8rem; display: inline-block;
+      transform-origin: bottom center;
+      animation: dig 1.6s ease-in-out infinite;
+    }
+    .dig-pile {
+      font-size: 1.4rem; display: inline-block;
+      animation: pile-grow 1.6s ease-in-out infinite;
+    }
+    .dig-sparkle {
+      font-size: 1rem; display: inline-block;
+      animation: sparkle 1.6s ease-in-out infinite .4s;
+      opacity: 0;
+    }
+    @keyframes dig {
+      0%   { transform: rotate(-30deg) translateY(0); }
+      40%  { transform: rotate(20deg) translateY(6px); }
+      60%  { transform: rotate(20deg) translateY(6px); }
+      100% { transform: rotate(-30deg) translateY(0); }
+    }
+    @keyframes pile-grow {
+      0%,35% { transform: scale(1); }
+      50%    { transform: scale(1.2); }
+      100%   { transform: scale(1); }
+    }
+    @keyframes sparkle {
+      0%,100% { opacity: 0; transform: translateY(0); }
+      50%     { opacity: 1; transform: translateY(-8px); }
+    }
 
     .trust-row {
       display: flex; align-items: center; gap: 28px; margin-top: 44px;
@@ -472,7 +507,7 @@
 <nav>
   <a href="#hero" class="nav-logo">
     <!-- Drop your logo file in this folder and update the src below -->
-    <img src="logo.png" alt="Legacy Sand Adventures" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+    <img src="Legacy Sand Logo.png" alt="Legacy Sand Adventures" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
     <span class="logo-text" style="display:none;">Legacy <span>Sand</span> Adventures</span>
   </a>
   <div class="nav-links">
@@ -510,6 +545,11 @@
   <div class="hero-blob blob-2"></div>
   <div class="hero-inner">
     <div class="hero-left">
+      <div class="dig-scene reveal">
+        <span class="dig-shovel">⛏️</span>
+        <span class="dig-pile">🏖️</span>
+        <span class="dig-sparkle">✨</span>
+      </div>
       <div class="hero-eyebrow reveal"><span class="dot"></span>Serving Northern Virginia</div>
       <h1 class="reveal">Where Little Hands<br/>Make Big <span class="sand">Memories.</span></h1>
       <p class="hero-sub reveal d1">Legacy Sand Adventures brings a mobile sensory sand play experience directly to your party, school, or community event. No beach required.</p>
@@ -924,7 +964,7 @@
 
 <!-- ══ FOOTER ══ -->
 <footer id="contact">
-  <img src="logo.png" alt="Legacy Sand Adventures" style="height:44px;margin-bottom:12px;opacity:.85;" onerror="this.style.display='none';document.getElementById('footer-text-logo').style.display='block';" />
+  <img src="Legacy Sand Logo.png" alt="Legacy Sand Adventures" style="height:44px;margin-bottom:12px;opacity:.85;" onerror="this.style.display='none';document.getElementById('footer-text-logo').style.display='block';" />
   <span class="footer-logo" id="footer-text-logo" style="display:none;">Legacy <span>Sand</span> Adventures</span>
   <p class="footer-tagline">Where Little Hands Make Big Memories.</p>
   <div class="footer-divider"></div>
