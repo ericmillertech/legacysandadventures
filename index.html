@@ -287,8 +287,18 @@
     .gi-ico{font-size:4rem;display:block;margin-bottom:6px;filter:drop-shadow(0 4px 14px rgba(0,0,0,.25));transition:transform .3s}
     .gi.tall .gi-ico{font-size:6rem}
     .gi:hover .gi-ico{transform:scale(1.15) rotate(-5deg)}
-    .gi-lbl{position:absolute;bottom:14px;left:12px;right:12px;background:rgba(255,255,255,.2);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:8px 14px;font-family:var(--hf);font-size:.75rem;font-weight:900;color:#fff;text-align:center;letter-spacing:.06em;text-transform:uppercase}
-    .gi-soon{position:absolute;top:12px;right:12px;background:var(--yellow);color:var(--text);font-size:.6rem;font-weight:900;padding:4px 10px;border-radius:50px;letter-spacing:.06em;text-transform:uppercase}
+    .gi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;z-index:0}
+    .gi-inner{position:relative;z-index:1}
+    .gi-lbl{position:absolute;bottom:14px;left:12px;right:12px;background:rgba(0,0,0,.5);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:8px 14px;font-family:var(--hf);font-size:.75rem;font-weight:900;color:#fff;text-align:center;letter-spacing:.06em;text-transform:uppercase;z-index:2}
+    .gi-soon{position:absolute;top:12px;right:12px;background:var(--yellow);color:var(--text);font-size:.6rem;font-weight:900;padding:4px 10px;border-radius:50px;letter-spacing:.06em;text-transform:uppercase;z-index:2}
+    /* Video trailer section */
+    #trailer{padding:80px 0;background:var(--text)}
+    .trailer-inner{max-width:960px;margin:0 auto;padding:0 40px;text-align:center}
+    @media(max-width:600px){.trailer-inner{padding:0 20px}}
+    .trailer-inner h2{font-family:var(--hf);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:#fff;margin-bottom:14px}
+    .trailer-inner p{font-size:1rem;color:rgba(255,255,255,.45);margin-bottom:40px;line-height:1.8}
+    .video-frame{position:relative;padding-bottom:56.25%;border-radius:18px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.08)}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
     /* ── ABOUT ── */
     #about{padding:100px 0;background:var(--surface)}
@@ -755,35 +765,50 @@
 </section>
 
 
+<!-- VIDEO TRAILER -->
+<section id="trailer">
+  <div class="trailer-inner">
+    <span class="tag tag-white reveal">See It in Action</span>
+    <h2 class="reveal">Watch What We Bring to<br/>Your Event.</h2>
+    <p class="reveal d1">See Legacy Sand Adventures set up, run, and bring smiles to kids across Northern Virginia. Want to add your own event video? Drop your YouTube link in and it plays right here.</p>
+    <div class="video-frame reveal d2">
+      <!-- Replace VIDEO_ID with a YouTube video ID, e.g. dQw4w9WgXcQ -->
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?rel=0&modestbranding=1&autoplay=0"
+              title="Legacy Sand Adventures — Sand Play Experience"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery">
   <div class="container">
     <div class="gallery-head">
       <span class="tag tag-coral reveal">Gallery</span>
       <h2 class="reveal">See the fun for yourself.</h2>
-      <p class="reveal d1">Real photos coming soon! As we complete events across Northern Virginia and the DMV, this gallery will fill up. Follow us on social media for the latest.</p>
+      <p class="reveal d1">A glimpse of what Legacy Sand Adventures brings to every event. Real event photos coming soon — these will be replaced with shots from our events across Northern Virginia.</p>
     </div>
   </div>
   <div class="gallery-grid reveal">
     <div class="gi tall g1">
-      <div class="gi-inner"><span class="gi-ico">🏖️</span></div>
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80&auto=format&fit=crop" alt="Kids playing outdoors"/>
       <div class="gi-lbl">Sand Play in Action</div>
-      <div class="gi-soon">Coming Soon</div>
     </div>
     <div class="gi g2">
-      <div class="gi-inner"><span class="gi-ico">🎂</span></div>
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80&auto=format&fit=crop" alt="Birthday celebration with children"/>
       <div class="gi-lbl">Birthday Party</div>
     </div>
     <div class="gi g3">
-      <div class="gi-inner"><span class="gi-ico">😄</span></div>
+      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80&auto=format&fit=crop" alt="Happy kids playing"/>
       <div class="gi-lbl">Happy Kids</div>
     </div>
     <div class="gi g4">
-      <div class="gi-inner"><span class="gi-ico">🏫</span></div>
+      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80&auto=format&fit=crop" alt="School outdoor event"/>
       <div class="gi-lbl">School Event</div>
     </div>
     <div class="gi g5">
-      <div class="gi-inner"><span class="gi-ico">🎪</span></div>
+      <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=600&q=80&auto=format&fit=crop" alt="Community festival fun"/>
       <div class="gi-lbl">Community Festival</div>
     </div>
   </div>
