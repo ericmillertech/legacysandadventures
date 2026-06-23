@@ -64,7 +64,7 @@
     nav{position:sticky;top:0;z-index:100;background:rgba(255,251,244,.96);backdrop-filter:blur(20px);border-bottom:2px solid var(--border);height:70px;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
     @media(max-width:700px){nav{padding:0 20px}}
     .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .nav-logo img{height:54px}
+    .nav-logo img{height:70px}
     .nav-logo-fb{font-family:var(--hf);font-weight:900;font-size:1.1rem;color:var(--text);display:none}
     .nav-logo-fb span{color:var(--coral)}
     .nav-links{display:flex;align-items:center;gap:26px}
@@ -356,8 +356,8 @@
     /* ── FOOTER ── */
     footer{background:#0D0500;padding:72px 40px 48px;text-align:center}
     @media(max-width:600px){footer{padding:56px 20px 40px}}
-    .hero-logo{height:130px;display:block;margin-bottom:28px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.35));position:relative;z-index:4}
-    @media(max-width:820px){.hero-logo{height:100px;margin:0 auto 24px}}
+    .hero-logo{height:190px;display:block;margin-bottom:28px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.35));position:relative;z-index:4}
+    @media(max-width:820px){.hero-logo{height:140px;margin:0 auto 24px}}
     .foot-logo-img{height:44px;opacity:.7;margin-bottom:14px;filter:brightness(0) invert(1);display:block;margin:0 auto 14px}
     .foot-logo-txt{font-family:var(--hf);font-weight:900;font-size:1.2rem;color:#fff;display:none;margin-bottom:14px}
     .foot-logo-txt span{color:var(--yellow)}
@@ -386,7 +386,6 @@
   </a>
   <div class="nav-links">
     <a href="#what">About</a>
-    <a href="#school">Schools</a>
     <a href="#services">Packages</a>
     <a href="#gallery">Gallery</a>
     <a href="#faq">FAQ</a>
@@ -402,7 +401,6 @@
     <button class="mob-close" onclick="document.querySelector('.mob-menu').classList.remove('open')">✕</button>
   </div>
   <a href="#what" onclick="document.querySelector('.mob-menu').classList.remove('open')">About</a>
-  <a href="#school" onclick="document.querySelector('.mob-menu').classList.remove('open')">Schools</a>
   <a href="#services" onclick="document.querySelector('.mob-menu').classList.remove('open')">Packages</a>
   <a href="#gallery" onclick="document.querySelector('.mob-menu').classList.remove('open')">Gallery</a>
   <a href="#faq" onclick="document.querySelector('.mob-menu').classList.remove('open')">FAQ</a>
@@ -458,19 +456,19 @@
         </div>
       </div>
       <div class="hc reveal d2">
-        <div class="hc-ico">🏫</div>
-        <div>
-          <h4>Schools &amp; Field Days</h4>
-          <p>Preschools, daycares, field days &amp; school fairs</p>
-          <span class="hc-tag">Edu Approved</span>
-        </div>
-      </div>
-      <div class="hc reveal d3">
         <div class="hc-ico">🎂</div>
         <div>
           <h4>Birthday Parties</h4>
           <p>An unforgettable party experience for all ages</p>
           <span class="hc-tag">All Ages</span>
+        </div>
+      </div>
+      <div class="hc reveal d3">
+        <div class="hc-ico">🏫</div>
+        <div>
+          <h4>Schools &amp; Field Days</h4>
+          <p>Preschools, daycares, field days &amp; school fairs</p>
+          <span class="hc-tag">Edu Approved</span>
         </div>
       </div>
       <div class="hc reveal d4">
@@ -568,9 +566,8 @@
 
       <div class="what-text">
         <span class="tag tag-coral reveal">What We Do</span>
-        <h2 class="reveal">The sand play experience<br/>that comes to you.</h2>
+        <h2 class="reveal">Sand Play Magic Delivered<br/>to Your Event.</h2>
         <p class="reveal d1">Legacy Sand Adventures is a mobile sensory play experience. We pull up with our custom sand trailer, set everything up, and create a safe, hands-on environment that encourages imagination, creativity, and learning through play.</p>
-        <p class="reveal d2">Unlike bounce houses and standard party rentals, sensory sand play supports child development — fine motor skills, creativity, and social interaction. It's fun <em>and</em> it's good for them.</p>
         <div class="check-list reveal d3">
           <div class="ci"><div class="ci-ico">✓</div> Full setup and breakdown — we handle everything</div>
           <div class="ci"><div class="ci-ico">✓</div> Clean, child-safe sand and age-appropriate toys</div>
@@ -582,59 +579,6 @@
   </div>
 </section>
 
-
-<!-- SCHOOL SECTION -->
-<section id="school">
-  <div class="chalk-inner container">
-    <div class="chalk-head">
-      <span class="tag tag-white reveal">🏫 For Schools &amp; Educators</span>
-      <h2 class="reveal">The field day upgrade<br/>teachers <em>actually love.</em></h2>
-      <p class="reveal d1">Sensory sand play is backed by early childhood development research. We partner with preschools, elementary schools, daycares, and after-school programs across Northern Virginia.</p>
-    </div>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <span class="edu-num">Benefit 01</span>
-        <span class="edu-ico">✏️</span>
-        <h3>Fine Motor Development</h3>
-        <p>Scooping, pouring, and molding sand builds hand strength and coordination that directly supports handwriting readiness.</p>
-      </div>
-      <div class="edu-card reveal d1">
-        <span class="edu-num">Benefit 02</span>
-        <span class="edu-ico">🧠</span>
-        <h3>Sensory Integration</h3>
-        <p>Tactile play helps children regulate sensory input — especially beneficial for kids with SPD, ADHD, and sensory processing challenges.</p>
-      </div>
-      <div class="edu-card reveal d2">
-        <span class="edu-num">Benefit 03</span>
-        <span class="edu-ico">🤝</span>
-        <h3>Social Skills</h3>
-        <p>Collaborative sand play encourages sharing, turn-taking, and communication in a natural, low-pressure environment.</p>
-      </div>
-      <div class="edu-card reveal">
-        <span class="edu-num">Benefit 04</span>
-        <span class="edu-ico">🔬</span>
-        <h3>STEM Connection</h3>
-        <p>Building, measuring, and experimenting with sand introduces physics and engineering concepts in a hands-on way kids remember.</p>
-      </div>
-      <div class="edu-card reveal d1">
-        <span class="edu-num">Benefit 05</span>
-        <span class="edu-ico">🎨</span>
-        <h3>Imaginative Play</h3>
-        <p>Open-ended sand play sparks storytelling and world-building — critical for language development and creative thinking.</p>
-      </div>
-      <div class="edu-card reveal d2">
-        <span class="edu-num">Benefit 06</span>
-        <span class="edu-ico">🏃</span>
-        <h3>Physical Activity</h3>
-        <p>Digging, hauling, and building provides full-body movement and gross motor engagement that complements structured learning.</p>
-      </div>
-    </div>
-    <div class="chalk-cta reveal">
-      <a href="#booking" class="btn btn-yellow btn-lg">Request a School Quote</a>
-      <p>We work with preschools, elementary schools, daycares, and after-school programs.</p>
-    </div>
-  </div>
-</section>
 
 
 <!-- WHO WE SERVE -->
@@ -687,53 +631,52 @@
     <div class="svc-head">
       <span class="tag tag-coral reveal">Packages &amp; Pricing</span>
       <h2 class="reveal">Choose the right package<br/>for your event.</h2>
-      <p class="reveal d1">All packages include full setup, breakdown, clean sand, toys, and a dedicated attendant. Everything is customizable.</p>
+      <p class="reveal d1">All packages include full delivery, setup, and breakdown. Contact us for a custom quote.</p>
     </div>
     <div class="packages">
       <div class="pkg reveal">
         <span class="pkg-ico">🎈</span>
-        <h3>Party Package</h3>
+        <h3>Basic Birthday Package</h3>
         <p class="psub">Perfect for birthday parties and smaller gatherings</p>
         <ul class="pkg-list">
-          <li>Up to 2 hours of play time</li>
-          <li>Up to 15 children</li>
-          <li>Full setup and breakdown</li>
-          <li>Sand toys and accessories</li>
-          <li>One attendant on-site</li>
+          <li>2-hour rental</li>
+          <li>One theme setup</li>
+          <li>Sand toys included</li>
+          <li>Delivery and setup</li>
         </ul>
-        <a href="#booking" class="btn btn-coral pkg-cta">Request This Package</a>
+        <p style="font-family:var(--hf);font-weight:900;font-size:1.1rem;color:var(--coral);margin-bottom:24px;">$250–$350</p>
+        <a href="#booking" class="btn btn-coral pkg-cta">Book This Package</a>
       </div>
       <div class="pkg feat reveal d1">
         <span class="pkg-badge">Most Popular</span>
         <span class="pkg-ico">⭐</span>
-        <h3>Adventure Package</h3>
-        <p class="psub">Great for larger parties and school events</p>
+        <h3>Premium Package</h3>
+        <p class="psub">The full experience for an unforgettable event</p>
         <ul class="pkg-list">
-          <li>Up to 3 hours of play time</li>
-          <li>Up to 30 children</li>
-          <li>Full setup and breakdown</li>
-          <li>Extended toy selection</li>
-          <li>Two attendants on-site</li>
-          <li>Custom themed accessories</li>
+          <li>3-hour rental</li>
+          <li>Choice of themes</li>
+          <li>Custom decorations</li>
+          <li>Music speaker</li>
+          <li>Bubble machine</li>
+          <li>Party attendant</li>
         </ul>
-        <a href="#booking" class="btn btn-yellow pkg-cta" style="color:var(--text);">Request This Package</a>
+        <p style="font-family:var(--hf);font-weight:900;font-size:1.1rem;color:var(--yellow);margin-bottom:24px;">$400–$550</p>
+        <a href="#booking" class="btn btn-yellow pkg-cta" style="color:var(--text);">Book This Package</a>
       </div>
       <div class="pkg comm reveal d2">
         <span class="pkg-ico">🏘️</span>
-        <h3>Community Package</h3>
-        <p class="psub">Built for festivals, HOAs, and large events</p>
+        <h3>Event / Festival Package</h3>
+        <p class="psub">Built for festivals, HOAs, and large community events</p>
         <ul class="pkg-list">
-          <li>4+ hours of play time</li>
-          <li>Unlimited children</li>
+          <li>Hourly rate for large events</li>
+          <li>Staff included</li>
           <li>Full setup and breakdown</li>
-          <li>Maximum toy selection</li>
-          <li>Full team on-site</li>
-          <li>Custom branding available</li>
         </ul>
-        <a href="#booking" class="btn btn-coral pkg-cta">Request This Package</a>
+        <p style="font-family:var(--hf);font-weight:900;font-size:1.1rem;color:var(--sky-dk);margin-bottom:24px;">$100–$150 / hour</p>
+        <a href="#booking" class="btn btn-coral pkg-cta">Book This Package</a>
       </div>
     </div>
-    <p class="reveal" style="text-align:center;margin-top:32px;font-size:.88rem;color:var(--dim);">Pricing varies by location, size, and duration. <a href="#booking" style="color:var(--coral);font-weight:800;">Contact us for a custom quote →</a></p>
+    <p class="reveal" style="text-align:center;margin-top:32px;font-size:.88rem;color:var(--dim);">Pricing varies by location and duration. <a href="#booking" style="color:var(--coral);font-weight:800;">Contact us for a custom quote →</a></p>
   </div>
 </section>
 
@@ -864,7 +807,7 @@
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How much space do you need to set up?<span class="faq-ico">+</span></button>
-        <div class="faq-a">We work with backyards, driveways, parks, gyms, fields, and more. Let us know your space in the booking form and we'll confirm it works.</div>
+        <div class="faq-a">We can work with parking lots, driveways, parks, and more. Let us know your space in the booking form and we'll confirm it works.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Is the sand safe for children?<span class="faq-ico">+</span></button>
@@ -884,7 +827,7 @@
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">What happens if it rains?<span class="faq-ico">+</span></button>
-        <div class="faq-a">We'll work with you to reschedule if weather becomes an issue. We monitor forecasts and reach out in advance. We can also work indoors in many cases!</div>
+        <div class="faq-a">Our sand is fully covered — we can operate in rain or shine! No need to worry about the weather.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How do I pay?<span class="faq-ico">+</span></button>
