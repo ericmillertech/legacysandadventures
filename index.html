@@ -335,29 +335,42 @@
     .faq-item.open .faq-a{max-height:300px;padding:0 28px 24px}
 
     /* ── BOOKING ── */
-    #booking{padding:100px 0;background:var(--text);position:relative;overflow:hidden}
+    #booking{padding:80px 0;background:var(--text);position:relative;overflow:hidden}
     #booking::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
-    .bk-inner{max-width:920px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
-    @media(max-width:600px){.bk-inner{padding:0 20px}}
-    #booking h2{color:#fff}
-    .bsub{font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:48px;max-width:600px}
-    .bk-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media(max-width:600px){.bk-form{grid-template-columns:1fr}}
+    .bk-layout{max-width:1100px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1.15fr;border-radius:28px;overflow:hidden;position:relative;z-index:1;border:1px solid rgba(255,255,255,.08)}
+    @media(max-width:860px){.bk-layout{grid-template-columns:1fr;padding:0 20px;border-radius:0;border:none}}
+    .bk-photo{position:relative;min-height:540px}
+    @media(max-width:860px){.bk-photo{min-height:240px}}
+    .bk-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .bk-photo-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(26,10,0,.5) 0%,rgba(255,87,34,.55) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
+    @media(max-width:860px){.bk-photo-overlay{padding:24px}}
+    .bk-photo-overlay h3{font-family:var(--hf);font-size:1.5rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:10px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+    .bk-photo-overlay p{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:22px}
+    .bk-pills{display:flex;flex-direction:column;gap:10px}
+    @media(max-width:860px){.bk-pills{flex-direction:row;flex-wrap:wrap;gap:8px}}
+    .bk-pill{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:#fff}
+    .bk-pill-ico{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+    .bk-form-side{background:rgba(255,255,255,.03);padding:48px 44px;border-left:1px solid rgba(255,255,255,.07)}
+    @media(max-width:860px){.bk-form-side{padding:36px 0;border-left:none}}
+    .bk-form-side h2{font-family:var(--hf);font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:6px;margin-top:14px}
+    .bsub{font-size:.88rem;color:rgba(255,255,255,.4);margin-bottom:28px;line-height:1.7}
+    .bk-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:520px){.bk-form{grid-template-columns:1fr}}
     .bk-form .full{grid-column:1/-1}
-    .fg{display:flex;flex-direction:column;gap:8px}
-    .fg label{font-size:.75rem;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase}
-    .fg input,.fg select,.fg textarea{padding:14px 18px;border-radius:14px;border:2px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#fff;font-family:var(--bf);font-size:.94rem;outline:none;transition:all .2s;width:100%}
-    .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.25)}
+    .fg{display:flex;flex-direction:column;gap:6px}
+    .fg label{font-size:.68rem;font-weight:800;color:rgba(255,255,255,.4);letter-spacing:.09em;text-transform:uppercase}
+    .fg input,.fg select,.fg textarea{padding:11px 15px;border-radius:12px;border:1.5px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);color:#fff;font-family:var(--bf);font-size:.9rem;outline:none;transition:all .2s;width:100%}
+    .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.2)}
     .fg select option{background:#1A0A00;color:#fff}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,193,7,.2);background:rgba(255,255,255,.1)}
-    .fg textarea{min-height:120px;resize:vertical}
-    .fnote{font-size:.74rem;color:rgba(255,255,255,.25);margin-top:14px}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,193,7,.15);background:rgba(255,255,255,.09)}
+    .fg textarea{min-height:100px;resize:vertical}
+    .fnote{font-size:.72rem;color:rgba(255,255,255,.2);margin-top:12px;text-align:center}
 
     /* ── FOOTER ── */
     footer{background:#0D0500;padding:72px 40px 48px;text-align:center}
     @media(max-width:600px){footer{padding:56px 20px 40px}}
-    .hero-logo{height:190px;display:block;margin-bottom:28px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.35));position:relative;z-index:4}
-    @media(max-width:820px){.hero-logo{height:140px;margin:0 auto 24px}}
+    .hero-logo{height:260px;display:block;margin-bottom:28px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.35));position:relative;z-index:4}
+    @media(max-width:820px){.hero-logo{height:190px;margin:0 auto 24px}}
     .foot-logo-img{height:44px;opacity:.7;margin-bottom:14px;filter:brightness(0) invert(1);display:block;margin:0 auto 14px}
     .foot-logo-txt{font-family:var(--hf);font-weight:900;font-size:1.2rem;color:#fff;display:none;margin-bottom:14px}
     .foot-logo-txt span{color:var(--yellow)}
@@ -714,79 +727,93 @@
 
 <!-- BOOKING -->
 <section id="booking">
-  <div class="bk-inner">
-    <span class="tag tag-white reveal">Book Your Event</span>
-    <h2 class="reveal">Ready to bring the<br/>sand to you? 🎉</h2>
-    <p class="bsub reveal d1">Fill out the form and we'll be in touch within 24 hours to confirm availability and answer any questions.</p>
-
-    <form class="bk-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="fg">
-        <label>First Name *</label>
-        <input type="text" name="first_name" placeholder="Jane" required/>
+  <div class="bk-layout">
+    <div class="bk-photo">
+      <img src="pexels-yankrukov-8435758.jpg" alt="Children playing in sand at a Legacy Sand Adventures event"/>
+      <div class="bk-photo-overlay">
+        <h3>Ready to bring the sand to you?</h3>
+        <p>Fill out the form and we'll get back to you within 24 hours to confirm availability.</p>
+        <div class="bk-pills">
+          <div class="bk-pill"><div class="bk-pill-ico">🚛</div> We come to you</div>
+          <div class="bk-pill"><div class="bk-pill-ico">✅</div> Full setup and cleanup</div>
+          <div class="bk-pill"><div class="bk-pill-ico">⭐</div> Family owned</div>
+          <div class="bk-pill"><div class="bk-pill-ico">📍</div> Northern Virginia and DMV</div>
+        </div>
       </div>
-      <div class="fg">
-        <label>Last Name *</label>
-        <input type="text" name="last_name" placeholder="Smith" required/>
-      </div>
-      <div class="fg">
-        <label>Email Address *</label>
-        <input type="email" name="email" placeholder="jane@email.com" required/>
-      </div>
-      <div class="fg">
-        <label>Phone Number *</label>
-        <input type="tel" name="phone" placeholder="(703) 555-0100" required/>
-      </div>
-      <div class="fg">
-        <label>Event Type *</label>
-        <select name="event_type" required>
-          <option value="" disabled selected>Select event type</option>
-          <option>Birthday Party</option>
-          <option>School / Daycare Event</option>
-          <option>Field Day</option>
-          <option>Church / Organization Event</option>
-          <option>Festival / Fair</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>Preferred Package</label>
-        <select name="package">
-          <option value="" disabled selected>Select a package</option>
-          <option>Basic Birthday Package ($250–$350)</option>
-          <option>Premium Package ($400–$550)</option>
-          <option>Event / Festival Package ($100–$150/hr)</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>Event Date *</label>
-        <input type="date" name="event_date" required/>
-      </div>
-      <div class="fg">
-        <label>Event Start Time *</label>
-        <input type="time" name="event_time" required/>
-      </div>
-      <div class="fg">
-        <label>Estimated Number of Children</label>
-        <input type="number" name="num_children" placeholder="e.g. 20" min="1"/>
-      </div>
-      <div class="fg">
-        <label>Estimated Number of Adults</label>
-        <input type="number" name="num_adults" placeholder="e.g. 10" min="0"/>
-      </div>
-      <div class="fg full">
-        <label>Event Address / Location *</label>
-        <input type="text" name="location" placeholder="123 Main St, Fairfax, VA" required/>
-      </div>
-      <div class="fg full">
-        <label>Additional Notes or Questions</label>
-        <textarea name="message" placeholder="Tell us anything else we should know about your event..."></textarea>
-      </div>
-      <div class="full" style="text-align:center;margin-top:12px;">
-        <button type="submit" class="btn btn-yellow btn-lg">Send Booking Request 🎉</button>
-        <p class="fnote">We'll respond within 24 hours. No payment required to submit.</p>
-      </div>
-    </form>
+    </div>
+    <div class="bk-form-side">
+      <span class="tag tag-white reveal">Book Your Event</span>
+      <h2 class="reveal">Let's make it happen.</h2>
+      <p class="bsub reveal">We'll respond within 24 hours. No payment needed to submit.</p>
+      <form class="bk-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="fg">
+          <label>First Name *</label>
+          <input type="text" name="first_name" placeholder="Jane" required/>
+        </div>
+        <div class="fg">
+          <label>Last Name *</label>
+          <input type="text" name="last_name" placeholder="Smith" required/>
+        </div>
+        <div class="fg">
+          <label>Email *</label>
+          <input type="email" name="email" placeholder="jane@email.com" required/>
+        </div>
+        <div class="fg">
+          <label>Phone *</label>
+          <input type="tel" name="phone" placeholder="(703) 555-0100" required/>
+        </div>
+        <div class="fg">
+          <label>Event Type *</label>
+          <select name="event_type" required>
+            <option value="" disabled selected>Select event type</option>
+            <option>Birthday Party</option>
+            <option>School / Daycare Event</option>
+            <option>Field Day</option>
+            <option>Church / Organization Event</option>
+            <option>Festival / Fair</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Preferred Package</label>
+          <select name="package">
+            <option value="" disabled selected>Select a package</option>
+            <option>Basic Birthday Package ($250 to $350)</option>
+            <option>Premium Package ($400 to $550)</option>
+            <option>Event / Festival Package ($100 to $150/hr)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Event Date *</label>
+          <input type="date" name="event_date" required/>
+        </div>
+        <div class="fg">
+          <label>Start Time *</label>
+          <input type="time" name="event_time" required/>
+        </div>
+        <div class="fg">
+          <label>Number of Children</label>
+          <input type="number" name="num_children" placeholder="e.g. 20" min="1"/>
+        </div>
+        <div class="fg">
+          <label>Number of Adults</label>
+          <input type="number" name="num_adults" placeholder="e.g. 10" min="0"/>
+        </div>
+        <div class="fg full">
+          <label>Event Address *</label>
+          <input type="text" name="location" placeholder="123 Main St, Fairfax, VA" required/>
+        </div>
+        <div class="fg full">
+          <label>Additional Notes</label>
+          <textarea name="message" placeholder="Anything else we should know about your event..."></textarea>
+        </div>
+        <div class="full" style="margin-top:8px;">
+          <button type="submit" class="btn btn-yellow btn-lg" style="width:100%;justify-content:center;">Send Booking Request 🎉</button>
+          <p class="fnote">No payment required to submit.</p>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
