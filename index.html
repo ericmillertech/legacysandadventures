@@ -167,10 +167,12 @@
     @media(max-width:720px){.what-inner{grid-template-columns:1fr;gap:48px}}
 
     .what-tile{border-radius:28px;overflow:hidden;position:relative;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#FF5722,#FF8F00 60%,#FFC107);box-shadow:0 24px 64px rgba(255,87,34,.3)}
+    .what-tile-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .what-tile-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.15) 100%)}
     .what-tile-icons{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;opacity:.2;user-select:none;font-size:7rem}
     .what-tile-icons span:nth-child(2){font-size:4rem;margin-left:90px;margin-top:-20px}
     .what-tile-icons span:nth-child(3){font-size:5rem;margin-left:-50px}
-    .what-tile-front{position:relative;z-index:1;padding:32px}
+    .what-tile-front{position:relative;z-index:2;padding:32px}
     .what-tile-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.25);border:1.5px solid rgba(255,255,255,.4);color:#fff;font-family:var(--hf);font-size:.72rem;font-weight:900;padding:6px 16px;border-radius:50px;margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px)}
     .what-tile h3{font-family:var(--hf);font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:10px;line-height:1.2}
     .what-tile p{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:18px}
@@ -270,7 +272,7 @@
     .gallery-head{text-align:center;max-width:600px;margin:0 auto 56px}
     .gallery-head h2{color:var(--text)}
     .gallery-head p{font-size:1.05rem;color:var(--dim);margin-top:12px;line-height:1.8}
-    .gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:16px;max-width:1100px;margin:0 auto;padding:0 40px}
+    .gallery-grid{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:240px 240px;gap:16px;max-width:1100px;margin:0 auto;padding:0 40px}
     @media(max-width:700px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;padding:0 20px}}
     @media(max-width:440px){.gallery-grid{grid-template-columns:1fr;grid-template-rows:auto}}
     .gi{border-radius:22px;overflow:hidden;position:relative;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center}
@@ -316,6 +318,16 @@
     .about-text p{font-size:1rem;color:var(--dim);line-height:1.9;margin-bottom:16px}
     .about-text p strong{color:var(--text)}
     .area-badge{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:rgba(255,87,34,.1);border:2px solid rgba(255,87,34,.3);padding:12px 22px;border-radius:50px;font-size:.88rem;font-weight:800;color:var(--coral-dk)}
+    .service-area{background:rgba(255,87,34,.07);border:2px solid rgba(255,87,34,.18);border-radius:18px;padding:26px 28px;margin-top:22px}
+    .sa-intro{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:16px;line-height:1.6}
+    .sa-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+    .sa-list li{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:700;color:var(--text)}
+    .sa-list li::before{content:'📍';font-size:.85rem;flex-shrink:0}
+    .sa-note{font-size:.84rem;color:var(--dim);line-height:1.7;border-top:1px solid rgba(255,87,34,.15);padding-top:14px;margin-top:2px}
+    .sa-note a{color:var(--coral-dk);font-weight:800;text-decoration:none}
+    .sa-note a:hover{text-decoration:underline}
+    .faq-a ul{margin:10px 0 6px 0;padding-left:22px;display:flex;flex-direction:column;gap:5px}
+    .faq-a ul li{font-size:.9rem;color:var(--dim);line-height:1.6}
 
     /* ── FAQ ── */
     #faq{padding:100px 0;background:var(--bg)}
@@ -329,8 +341,8 @@
     .faq-q:hover{color:var(--coral)}
     .faq-ico{width:28px;height:28px;border-radius:8px;background:rgba(255,193,7,.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;transition:transform .3s;color:var(--yellow-dk);font-weight:900;font-family:var(--hf)}
     .faq-item.open .faq-ico{transform:rotate(45deg);background:var(--yellow);color:var(--text)}
-    .faq-a{padding:0 28px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:.93rem;color:var(--dim);line-height:1.8}
-    .faq-item.open .faq-a{max-height:300px;padding:0 28px 24px}
+    .faq-a{padding:0 28px;max-height:0;overflow:hidden;transition:max-height .45s ease,padding .35s ease;font-size:.93rem;color:var(--dim);line-height:1.8}
+    .faq-item.open .faq-a{max-height:700px;padding:0 28px 24px}
 
     /* ── BOOKING ── */
     #booking{padding:80px 0;background:var(--text);position:relative;overflow:hidden}
@@ -518,9 +530,8 @@
   <div class="container">
     <div class="what-inner">
       <div class="what-tile reveal">
-        <div class="what-tile-icons">
-          <span>🏖️</span><span>⛏️</span><span>🌟</span>
-        </div>
+        <img src="IMG_2731.jpeg" alt="Inside the Legacy Sand Adventures mobile trailer, fully set up for a birthday party" class="what-tile-img"/>
+        <div class="what-tile-overlay"></div>
         <div class="what-tile-front">
           <div class="what-tile-badge">🚛 Fully Mobile</div>
           <h3>Sand play delivered<br/>straight to your door.</h3>
@@ -528,7 +539,6 @@
           <div class="feat-chips">
             <span class="feat-chip">Clean Sand</span>
             <span class="feat-chip">All Toys Included</span>
-            <span class="feat-chip">Indoor &amp; Outdoor</span>
             <span class="feat-chip">Setup &amp; Teardown</span>
           </div>
         </div>
@@ -541,8 +551,7 @@
         <div class="check-list reveal d3">
           <div class="ci"><div class="ci-ico">✓</div> Full setup and breakdown — we handle everything</div>
           <div class="ci"><div class="ci-ico">✓</div> Clean, child-safe sand and age-appropriate toys</div>
-          <div class="ci"><div class="ci-ico">✓</div> Works indoors and outdoors at any venue</div>
-          <div class="ci"><div class="ci-ico">✓</div> We travel anywhere in Northern Virginia &amp; the DMV</div>
+          <div class="ci"><div class="ci-ico">✓</div> We serve Northern Virginia, Washington DC, and Maryland</div>
         </div>
       </div>
     </div>
@@ -618,29 +627,21 @@
     <div class="gallery-head">
       <span class="tag tag-coral reveal">Gallery</span>
       <h2 class="reveal">See the fun for yourself.</h2>
-      <p class="reveal d1">A glimpse of what Legacy Sand Adventures brings to every event. Real event photos coming soon — these will be replaced with shots from our events across Northern Virginia.</p>
+      <p class="reveal d1">A glimpse of what Legacy Sand Adventures brings to every event.</p>
     </div>
   </div>
   <div class="gallery-grid reveal">
-    <div class="gi tall g1">
-      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80&auto=format&fit=crop" alt="Kids playing outdoors"/>
-      <div class="gi-lbl">Sand Play in Action</div>
+    <div class="gi tall">
+      <img src="IMG_2772.jpeg" alt="Children playing in the sand inside the Legacy Sand Adventures trailer at a birthday party"/>
+      <div class="gi-lbl">Birthday Party Fun</div>
     </div>
-    <div class="gi g2">
-      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80&auto=format&fit=crop" alt="Birthday celebration with children"/>
-      <div class="gi-lbl">Birthday Party</div>
+    <div class="gi">
+      <img src="IMG_2731.jpeg" alt="The Legacy Sand Adventures mobile trailer, open and fully set up"/>
+      <div class="gi-lbl">The Mobile Trailer</div>
     </div>
-    <div class="gi g3">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80&auto=format&fit=crop" alt="Happy kids playing"/>
-      <div class="gi-lbl">Happy Kids</div>
-    </div>
-    <div class="gi g4">
-      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80&auto=format&fit=crop" alt="School outdoor event"/>
-      <div class="gi-lbl">School Event</div>
-    </div>
-    <div class="gi g5">
-      <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=600&q=80&auto=format&fit=crop" alt="Community festival fun"/>
-      <div class="gi-lbl">Community Festival</div>
+    <div class="gi">
+      <img src="IMG_2729.jpeg" alt="Construction theme sand play setup with birthday decorations and toys"/>
+      <div class="gi-lbl">Construction Theme Setup</div>
     </div>
   </div>
 </section>
@@ -669,8 +670,15 @@
       <h2 class="reveal">Play is how children learn.<br/>We make it unforgettable.</h2>
       <p class="reveal d1">Legacy Sand Adventures was born from a simple belief: children deserve experiences that spark their imagination, engage their senses, and create lasting family memories. We built a mobile sand play experience that brings that joy directly to families, schools, and communities across Northern Virginia.</p>
       <p class="reveal d2">We're proud to be a local, family-owned business. Every event is an opportunity to <strong>make a child's day</strong> — and to give parents and organizers a stress-free, memorable experience they'll want to book again and again.</p>
-      <div class="area-badge reveal d3">
-        📍 Serving Northern Virginia &amp; Surrounding Areas
+      <div class="service-area reveal d3">
+        <p class="sa-intro">We bring the fun to you! We proudly provide mobile play experiences throughout:</p>
+        <ul class="sa-list">
+          <li>Northern Virginia</li>
+          <li>Washington, DC</li>
+          <li>Montgomery County, Maryland</li>
+          <li>Prince George's County, Maryland</li>
+        </ul>
+        <p class="sa-note">Outside our standard service area? <a href="#booking">Contact us!</a> We may be able to accommodate your event for an additional travel fee.</p>
       </div>
     </div>
   </div>
@@ -687,8 +695,35 @@
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the minimum age?<span class="faq-ico">+</span></button>
+        <div class="faq-a">Our sand play experiences are designed for children ages 2–10. Younger children are welcome with active adult supervision.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">What types of toys are included?<span class="faq-ico">+</span></button>
+        <div class="faq-a">We provide a variety of high-quality, child-friendly sand toys, including:
+          <ul>
+            <li>Buckets &amp; shovels</li>
+            <li>Sand molds</li>
+            <li>Construction trucks &amp; excavators</li>
+            <li>Beach toys</li>
+            <li>Digging tools</li>
+            <li>Pretend play accessories</li>
+            <li>Age-appropriate sensory toys</li>
+          </ul>
+          All toys are cleaned and sanitized before and after each event.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">How many children can play at one time?<span class="faq-ico">+</span></button>
+        <div class="faq-a">Our standard setup comfortably accommodates up to 12 children playing at once. Larger parties can be accommodated with additional sandboxes and toys. Please contact us for custom event packages.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you accommodate children with special needs, including autism?<span class="faq-ico">+</span></button>
+        <div class="faq-a">Absolutely! Legacy Sand Adventures believes every child deserves a fun and inclusive experience. Sensory play can be especially beneficial for many children, including those with autism and other sensory processing needs.<br/><br/>We are happy to work with families to create a comfortable and enjoyable experience. If a child has any specific accommodations or sensory preferences, please let us know when booking so we can do our best to meet their needs.<br/><br/>Our goal is to provide a safe, welcoming, and memorable experience for every child.</div>
+      </div>
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">What areas do you serve?<span class="faq-ico">+</span></button>
-        <div class="faq-a">We primarily serve Northern Virginia and surrounding areas including DC, Maryland, and the greater DMV region. Not sure if we cover your location? Send us a message!</div>
+        <div class="faq-a">We proudly serve Northern Virginia, Washington DC, Montgomery County Maryland, and Prince George's County Maryland. Outside these areas? Contact us — we may be able to accommodate your event for an additional travel fee.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How much space do you need to set up?<span class="faq-ico">+</span></button>
@@ -727,7 +762,7 @@
 <section id="booking">
   <div class="bk-layout">
     <div class="bk-photo">
-      <img src="pexels-yankrukov-8435758.jpg" alt="Children playing in sand at a Legacy Sand Adventures event"/>
+      <img src="IMG_2772.jpeg" alt="Children playing in the sand inside the Legacy Sand Adventures trailer"/>
       <div class="bk-photo-overlay">
         <h3>Ready to bring the sand to you?</h3>
         <p>Fill out the form and we'll get back to you within 24 hours to confirm availability.</p>
@@ -832,8 +867,9 @@
   </div>
   <p class="fcopy">
     <a href="mailto:info@legacysandadventures.com">info@legacysandadventures.com</a><br/>
-    📍 Serving Northern Virginia &amp; Surrounding Areas<br/>
+    📍 Serving Northern Virginia, Washington DC, and Maryland<br/>
     &copy; 2025 Legacy Sand Adventures. All rights reserved.<br/>
+    <span style="opacity:.6;font-size:.78rem;letter-spacing:.04em;">Licensed &amp; Bonded</span><br/>
     <span style="opacity:.4;font-size:.68rem;">Website by Miller Innovations LLC</span>
   </p>
 </footer>
