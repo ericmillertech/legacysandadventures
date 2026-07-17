@@ -8,13 +8,15 @@
 
   <meta property="og:title" content="Legacy Sand Adventures — Mobile Sensory Sand Play"/>
   <meta property="og:description" content="Legacy Sand Adventures brings mobile sensory sand play to schools, birthday parties, and community events across Northern Virginia and surrounding areas."/>
-  <meta property="og:image" content="https://legacysandadventures.com/logo.png"/>
+  <meta property="og:image" content="https://legacysandadventures.com/og-image.jpg"/>
+  <meta property="og:image:width" content="630"/>
+  <meta property="og:image:height" content="630"/>
   <meta property="og:url" content="https://legacysandadventures.com/"/>
   <meta property="og:type" content="website"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Legacy Sand Adventures — Mobile Sensory Sand Play"/>
   <meta name="twitter:description" content="Legacy Sand Adventures brings mobile sensory sand play to schools, birthday parties, and community events across Northern Virginia and surrounding areas."/>
-  <meta name="twitter:image" content="https://legacysandadventures.com/logo.png"/>
+  <meta name="twitter:image" content="https://legacysandadventures.com/og-image.jpg"/>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -836,24 +838,12 @@
           <input type="date" name="event_date" required/>
         </div>
         <div class="fg">
-          <label>Start Time *</label>
-          <input type="time" name="event_time" required/>
-        </div>
-        <div class="fg">
           <label>Number of Children</label>
           <input type="number" name="num_children" placeholder="e.g. 20" min="1"/>
         </div>
-        <div class="fg">
-          <label>Number of Adults</label>
-          <input type="number" name="num_adults" placeholder="e.g. 10" min="0"/>
-        </div>
-        <div class="fg full">
-          <label>Event Address *</label>
-          <input type="text" name="location" placeholder="123 Main St, Fairfax, VA" required/>
-        </div>
         <div class="fg full">
           <label>Additional Notes</label>
-          <textarea name="message" placeholder="Anything else we should know about your event..."></textarea>
+          <textarea name="message" placeholder="Anything else we should know about your event... (preferred time, address, number of adults, etc.)"></textarea>
         </div>
         <div class="full" style="margin-top:8px;">
           <button type="submit" class="btn btn-yellow btn-lg" style="width:100%;justify-content:center;">Send Booking Request 🎉</button>
